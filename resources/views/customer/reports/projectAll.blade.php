@@ -65,12 +65,12 @@
 
             </td>
             <td align="center">
-                <img src="{{ public_path('assets/images/logo-lightversion.png') }}" alt="Logo" width="100px" height="50px" class="logo"/>
+                <img src="{{ public_path('assets/images/logo-lightversion.png') }}" alt="Logo" width="250px" height="50px" class="logo"/>
             </td>
             <td align="right" style="width: 40%;">
                 <h3>Genesis Design</h3>
                 <pre>
-                    https://company.com
+                {{ config('app.url') }}
                     Street 26
                     123456 City
                     United Kingdom
