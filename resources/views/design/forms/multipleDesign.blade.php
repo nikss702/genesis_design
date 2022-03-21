@@ -38,17 +38,17 @@
                 <div class="wizard-content" style="padding-bottom:2%;">
                     <form id="array_form" enctype="multipart/form-data" class="validation-wizard wizard-circle m-t-40">
                     @csrf
-                    <div class="row">
-                        <div class="col s12">
-                            <h6 class="red-text capitalize" style="padding-bottom:2%;padding-left:2%;">* Mandatory Fields</h6>
-                        </div>
-                    </div>
                     <input type="hidden" name="project_id" value="{{$project_id}}">
                   
                    
                     @if(in_array('aurora design',$type))
                     <h6>Aurora Design</h6>
                     <section>
+                        <div class="row">
+                            <div class="col s12">
+                                <h6 class="red-text capitalize">* Mandatory Fields</h6>
+                            </div>
+                        </div>
                         <div class="row valign-wrapper">
                             <div class="input-field col s6">
                             <input type="hidden" name="aurora_design" id="aurora_design" value="aurora design">
@@ -255,6 +255,11 @@
                     <h6>Structural Load Letter and Calculation</h6>
                     <section>
                         <div class="row">
+                            <div class="col s12">
+                                <h6 class="red-text capitalize">* Mandatory Fields</h6>
+                            </div>
+                        </div>
+                        <div class="row">
                             <div class="col s12 input-field">
                             <input type="hidden" name="structural_load_letter_and_calculations" id="structural_load_letter_and_calculations" value="structural load letter and calculations">
                                 <select id="roof_type">
@@ -457,6 +462,11 @@
                     <h6>PE Stamping</h6>
                     <section>
                         <div class="row">
+                            <div class="col s12">
+                                <h6 class="red-text capitalize">* Mandatory Fields</h6>
+                            </div>
+                        </div>
+                        <div class="row">
                             <div class="col s6">
                                 <div class="input-field">
                                 <input type="hidden" name="pe_stamping" id="pe_stamping" value="pe stamping">
@@ -515,6 +525,11 @@
                 @if(in_array('electrical load calculations',$type))
                     <h6>Electrical Load Calculations</h6>
                     <section>
+                        <div class="row">
+                            <div class="col s12">
+                                <h6 class="red-text capitalize">* Mandatory Fields</h6>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col s6">
                                 <div class="input-field col s12">
@@ -773,6 +788,11 @@
                         <h4>Basic Information</h4>
                             <section>
                                 <div class="row">
+                                    <div class="col s12">
+                                        <h6 class="red-text capitalize">* Mandatory Fields</h6>
+                                    </div>
+                                </div>
+                                <div class="row">
                                     <div class="col m4">
                                         <div class="input-field col s12">
                                             <div class="switch center">
@@ -953,6 +973,11 @@
                             </section><hr>
                             <h4>Roof Information</h4>
                             <section>
+                                <div class="row">
+                                    <div class="col s12">
+                                        <h6 class="red-text capitalize">* Mandatory Fields</h6>
+                                    </div>
+                                </div>
                                 <div class="row">
                                     <div class="col s6">
                                         <div class="input-field col s12">
@@ -1284,6 +1309,11 @@
                             <h4>Electrical Information</h4>
                             <section>
                                 <div class="row">
+                                    <div class="col s12">
+                                        <h6 class="red-text capitalize">* Mandatory Fields</h6>
+                                    </div>
+                                </div>
+                                <div class="row">
                                     <div class="input-field col s12">
                                         <input id="utility" name="utility" type="text"  value="" placeholder=" ">
                                         <label for="utility">Utility</label>
@@ -1388,6 +1418,11 @@
                             </section><hr>
                             <h4>Utility Bills/Electrical Load</h4>
                             <section>
+                                <div class="row">
+                                    <div class="col s12">
+                                        <h6 class="red-text capitalize">* Mandatory Fields</h6>
+                                    </div>
+                                </div>
                                 <div class="row">
                                     <div class="col s12">
                                         <div class="mh-a" id="uppyBill"></div>

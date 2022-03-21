@@ -44,14 +44,14 @@
                     <div class="wizard-content" style="padding-bottom:2%;">
                         <form id="engineering_permit_package" enctype="multipart/form-data" class="validation-wizard wizard-circle m-t-40">
                             @csrf
-                            <div class="row">
-                                <div class="col s12">
-                                    <h6 class="red-text capitalize" style="padding-bottom:2%;padding-left:2%;">* Mandatory Fields</h6>
-                                </div>
-                            </div>
                             <input type="hidden" value="{{ $project_id }}" name="project_id">
                             <h6>Basic Information</h6>
                             <section>
+                                <div class="row">
+                                    <div class="col s12">
+                                        <h6 class="red-text capitalize">* Mandatory Fields</h6>
+                                    </div>
+                                </div>
                                 <div class="row">
                                     <div class="col m4">
                                         <div class="input-field col s12">
@@ -235,6 +235,11 @@
                             </section>
                             <h6>Roof Information</h6>
                             <section>
+                                <div class="row">
+                                    <div class="col s12">
+                                        <h6 class="red-text capitalize">* Mandatory Fields</h6>
+                                    </div>
+                                </div>
                                 <div class="row">
                                     <div class="col s6">
                                         <div class="input-field col s12">
@@ -567,6 +572,11 @@
                             <h6>Electrical Information</h6>
                             <section>
                                 <div class="row">
+                                    <div class="col s12">
+                                        <h6 class="red-text capitalize">* Mandatory Fields</h6>
+                                    </div>
+                                </div>
+                                <div class="row">
                                     <div class="input-field col s12">
                                         <input id="utility" name="utility" type="text"  value="" placeholder=" ">
                                         <label for="utility">Utility</label>
@@ -670,6 +680,11 @@
                             </section>
                             <h6>Utility Bills/Electrical Load</h6>
                             <section>
+                                <div class="row">
+                                    <div class="col s12">
+                                        <h6 class="red-text capitalize">* Mandatory Fields</h6>
+                                    </div>
+                                </div>
                                 <div class="row">
                                     <h4 class="mt-2">Upload Bill</h4>
                                     <div class="col s12">
