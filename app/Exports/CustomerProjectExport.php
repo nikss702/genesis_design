@@ -36,7 +36,7 @@ class CustomerProjectExport implements FromView, ShouldAutoSize, WithEvents
                 foreach($datas as $data) {
                     $count += $data->designs->count();
                 }
-                $a='A5:'.'H'.(6+count($datas));
+                $a='A5:'.'H'.(6+$count);
                 $x='A5:H5';
                 $event->sheet->getStyle($x)->applyFromArray([
                     'font' => [
