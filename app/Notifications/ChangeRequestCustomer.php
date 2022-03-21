@@ -59,7 +59,7 @@ class ChangeRequestCustomer extends Notification
     public function toArray($notifiable)
     {
         return [
-            'info' => "New Change Request!",
+            'info' => "New Change Request",
             'project_name' => $this->project_name,
             'route' => $this->link,
         ];

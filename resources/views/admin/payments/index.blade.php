@@ -186,7 +186,7 @@ function setProjectID(name,id,design_id){
                         <div class="input-field inline">
                            
                             <input id="project_search" type="text" data-type="projects">
-                            <label for="project_search">Search For Project(s)...</label>
+                            <label for="project_search">Search For Projects</label>
                         </div>
                     </div>
                     <div class="col s3">

@@ -116,7 +116,7 @@
                     </table>
 
 <p style="padding-top:2%;">
-            Displaying {{$projectQuery->count()}} of {{ $projectQuery->total() }} Project(s).
+            Displaying {{$projectQuery->count()}} of {{ $projectQuery->total() }} Projects.
         </p>
 </div>
         <style>

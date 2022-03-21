@@ -59,7 +59,7 @@ class StatusChange extends Notification
     public function toArray($notifiable)
     {
         return [
-            'info' => "Design Status Update!",
+            'info' => "Design Status Update",
             'project_name' => $this->project_name,
             'route' => $this->link,
         ];

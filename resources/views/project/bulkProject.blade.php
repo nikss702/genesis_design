@@ -29,12 +29,12 @@ Create Bulk Project
                             <div data-repeater-item>
                                 <div class="row">
                                     <div class="input-field col s5">
-                                        <input id="customer_name" type="text" name="customer_name[]" placeholder="" value="" class="required">
-                                        <label for="customer_name">Customer Name: </label>
+                                        <input id="customer_name" type="text" name="customer_name[]" value="" class="required">
+                                        <label for="customer_name">Customer Name </label>
                                     </div>
                                     <div class="input-field col s5">
                                         <select  id="project_type" name="customer_project_type[]" class='browser-default'>
-                                            <option value=""  selected>Choose your option</option>
+                                            <option value=""  selected>Select Project Type</option>
                                             <option value="residential">Residential</option>
                                             <option value="commercial">Commercial</option>
                                         </select>
@@ -45,8 +45,8 @@ Create Bulk Project
                                 </div>
                                 <div class="row">
                                     <div class="input-field col s10">
-                                        <input type="text" id="customer_address" name="customer_address[]"  placeholder=" " class="required">
-                                        <label for="customer_address">Address: </label>
+                                        <input type="text" id="customer_address" name="customer_address[]" class="required">
+                                        <label for="customer_address">Address </label>
                                     </div>
                                    
                                 </div>
@@ -195,7 +195,7 @@ axios(fileInsert, {
                                     </div>
                                     <div class='col s4'>
                                         <p><label>
-                                            <input type='checkbox' id='pe_stamping' onchange='getDesignPrice('pe_stamping',{{$project_id}},1)' name='pe_stamping'/>
+                                            <input type='checkbox' id='pe_stamping' onchange='getDesignPrice("pe_stamping",{{$project_id}},1)' name='pe_stamping'/>
                                             <span>PE Stamping</span>
                                         </label></p>
                                     </div>
@@ -237,7 +237,7 @@ axios(fileInsert, {
                 target: '#uppyBulk'+uppiesArray[count],
                 inline: true,
                 hideUploadButton: true,
-                note: "Upto 20 files of 20 MBs each"
+                note: "Upto 20 files of 20 MB each"
             }).use(Uppy.XHRUpload, {
                 endpoint: "{{ env('SUN_STORAGE') }}/file",
                 headers: {
@@ -283,7 +283,7 @@ axios(fileInsert, {
                 target: `#uppyBulk`,
                 inline: true,
                 hideUploadButton: true,
-                note: "Upto 20 files of 20 MBs each"
+                note: "Upto 20 files of 20 MB each"
             }).use(Uppy.XHRUpload, {
                 endpoint: "{{ env('SUN_STORAGE') }}/file",
                 headers: {

@@ -16,7 +16,7 @@
             <div class="card card-content" style="padding-top:2%;padding-bottom:2%;">
                 <div class="row">
                     <div class="col s12">
-                        <h6 class="red-text capitalize" style="padding-bottom:2%;">* Fields are Required</h6>
+                        <h6 class="red-text capitalize" style="padding-bottom:2%;">* Mandatory Fields</h6>
                     </div>
                 </div>
             <section>
@@ -292,7 +292,7 @@
                             @endif
                             </div>
                             <div class="row center">
-                                <p class="imperial-red-text">We will initiate a hold of ${{$type->latestPrice->price}} when you save this request. The entire amount will only be captured once we send you the design.</p>
+                                <p class="imperial-red-text">We will initiate a hold of ${{$type->latestPrice->price}} when you request this design. The entire amount will only be captured once we send you the design.</p>
                                 <button class="btn green" type="button" onclick="insert(this)">Request Design</button>
                                 <div class="row">
                                     <div class="col s12 m4 offset-m4" id="stripe_card" style="display: none">
@@ -389,7 +389,7 @@
                 target: `#uppyBill`,
                 inline: true,
                 hideUploadButton: true,
-                note: "Upto 20 files of 20 MBs each"
+                note: "Upto 20 files of 20 MB each"
             }).use(Uppy.XHRUpload, {
                 endpoint: "{{ env('SUN_STORAGE') }}/file",
                 headers: {

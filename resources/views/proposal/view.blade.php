@@ -112,7 +112,7 @@
                                 @if(Auth::user()->role == 'admin')
                                     <a class="btn btn-large imperial-red-outline-button" id="quote_price">Set price for the change request</a>
                                 @else
-                                    <span class="imperial-red white-text p-10">Waiting for Approval!</span>
+                                    <span class="imperial-red white-text p-10">Waiting for Approval</span>
                                 @endif
                                 @component('components.quote-change-request', ["design"=>$design])@endcomponent
                                 @break
@@ -147,8 +147,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <p class="imperial-red-text">We will initiate a hold of ${{$design->proposals[0]->changeRequest->price}} when you accept this request. The funds will only be captured when send a
-                                        proposal</p>
+                                    <p class="imperial-red-text">We will initiate a hold of ${{$design->proposals[0]->changeRequest->price}} when you accept this request. The amount will only be captured when we send the proposal.</p>
                                 </div>
                                 @break
                                 @default

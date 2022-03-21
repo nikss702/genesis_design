@@ -53,7 +53,7 @@ Manager Details - Genesis Design
                 </div>
                 <div id="createManager" class="modal">
                     <div class="modal-content center">
-                        <h4>Add new Manager</h4>
+                        <h4>Add New Manager</h4>
                         <form class="center" method="post" action="{{ route('admin.manager.store') }}">
                             @csrf
                             <div class="row">

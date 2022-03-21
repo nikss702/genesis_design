@@ -156,7 +156,7 @@
                     <img src="{{ asset('assets/images/users/'.$profile_img) }}" class="" width="100">
                     <h4 class="card-title white-text capitalize">{{ Auth::user()->first_name }} {{ Auth::user()->last_name }}</h4>
                     <h6 class="card-subtitle white-text">{{ Auth::user()->email }}</h6>
-                    <h6 class="card-subtitle"><span class="label label-red white-text capitalize">{{ Auth::user()->role }}</span></h6>
+                    {{-- <h6 class="card-subtitle"><span class="label label-red white-text capitalize">{{ Auth::user()->role }}</span></h6> --}}
                 </div>
             </div>
         </div>

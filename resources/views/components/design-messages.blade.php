@@ -36,7 +36,7 @@
                 target: `#uppy`,
                 inline: true,
                 hideUploadButton: true,
-                note: "Upto 20 files of 20 MBs each"
+                note: "Upto 20 files of 20 MB each"
             }).use(Uppy.XHRUpload, {
                 endpoint: "{{ env('SUN_STORAGE') }}/file",
                 headers: {

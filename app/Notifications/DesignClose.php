@@ -58,7 +58,7 @@ class DesignClose extends Notification
     public function toArray($notifiable)
     {
         return [
-            'info' => 'Design Closed!',
+            'info' => 'Design Closed',
             'project_name' => $this->project_name,
             'route' => $this->link,
         ];

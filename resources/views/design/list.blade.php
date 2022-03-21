@@ -270,7 +270,6 @@
             <div class="collapsible-header center imperial-red-text">
                 No designs found
             </div>
-            <div class="collapsible-body center">Even more nothingness...</div>
         </li>
     </script>
 @endsection

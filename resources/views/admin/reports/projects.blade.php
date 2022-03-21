@@ -96,7 +96,7 @@
                                     </td>
                                     <td class="center">
                                         <button class="btn btn-small light-green modal-trigger tooltipped" data-position="bottom" data-tooltip="Assign to an Engineer" href="#assignModel" onclick="setProjectID('{{ $weekly->name }}',{{$weekly->id}},{{$design->id}})"><i class="ti-check-box small"></i></button>
-                                        <a href="@if(Auth::user()->role == 'admin'){{ route('admin.projects.edit', $weekly->id) }}@else{{ route('manager.projects.edit', $weekly->id) }}@endif" class="indigo-text"><button class="btn btn-small indigo tooltipped" data-position="bottom" data-tooltip="Edit the Project" type="button"><i class="ti-pencil small"></i></button></a>
+                                        <a href="@if(Auth::user()->role == 'admin'){{ route('admin.projects.edit', $weekly->id) }}@else{{ route('manager.projects.edit', $weekly->id) }}@endif" class="indigo-text"><button class="btn btn-small indigo tooltipped" data-position="bottom" data-tooltip="View the Project" type="button"><i class="ti-eye small"></i></button></a>
                                     </td>
                                 </tr>
                                 @endforeach

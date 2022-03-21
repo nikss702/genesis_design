@@ -46,7 +46,7 @@
                 target: `#uppy`,
                 inline: true,
                 hideUploadButton: true,
-                note: "Upto 20 files of 20 MBs each"
+                note: "Upto 20 files of 20 MB each"
             }).use(Uppy.XHRUpload, {
                 endpoint: "{{ env('SUN_STORAGE') }}/file",
                 headers: {
@@ -358,7 +358,7 @@
         <div class="card card-content" style="padding-top:2%;padding-bottom:2%;">
             <div class="row">
                 <div class="col s12">
-                    <h6 class="red-text capitalize" style="padding-bottom:2%;">* Fields are Required</h6>
+                    <h6 class="red-text capitalize" style="padding-bottom:2%;">* Mandatory Fields</h6>
                 </div>
             </div>
             <div class="row valign-wrapper">
@@ -408,7 +408,7 @@
                         <option value="black roof">Back Roof</option>
                         <option value="garage">Garage</option>
                     </select>
-                    <label for="installation">Installation restrictions</label>
+                    <label for="installation">Installation Restrictions</label>
                     <span class="helper-text" data-error="This field is required" data-success="">Required</span>
                 </div>
                 <div class="input-field col s4">
@@ -564,7 +564,7 @@
         <x-DesignCostAddition :projectID=$project_id :design=$type></x-DesignCostAddition>
         <div class="row">
             <div class="col s12 center">
-                <p class="imperial-red-text">We will initiate a hold of ${{$type->latestPrice->price}} when you save this request. The entire amount will only be captured once we send you the design.</p>
+                <p class="imperial-red-text">We will initiate a hold of ${{$type->latestPrice->price}} when you request this design. The entire amount will only be captured once we send you the design.</p>
                 <button type="button" class="btn imperial-red-outline-button" onclick="insert(this)">Request&nbsp;Design</button>
             </div>
         </div>

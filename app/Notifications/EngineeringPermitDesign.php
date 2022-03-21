@@ -58,7 +58,7 @@ class EngineeringPermitDesign extends Notification
     public function toArray($notifiable)
     {
         return [
-            'info' => "New Engineering Permit Design!",
+            'info' => "New Engineering Permit Design",
             'project_name' => $this->project_name,
             'route' => $this->link,
         ];

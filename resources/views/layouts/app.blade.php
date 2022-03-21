@@ -95,7 +95,7 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <a class="center-align" href="@if(Auth::user()->role == 'admin') {{route('admin.markRead')}} @elseif(Auth::user()->role == 'manager') {{route('manager.markRead')}} @else {{route('customer.markRead')}} @endif"> <strong>Mark all as read</strong> </a>
+                                    <a class="center-align" href="@if(Auth::user()->role == 'admin') {{route('admin.markRead')}} @elseif(Auth::user()->role == 'manager') {{route('manager.markRead')}} @else {{route('customer.markRead')}} @endif"> <strong>Mark All As Read</strong> </a>
                                 </li>
                             </ul>
                         </li>
@@ -161,7 +161,7 @@
                         <li class="divider"></li>
                         @endif
                         @if (Auth::user()->role === \App\Statics\Statics::USER_TYPE_CUSTOMER)
-                            <li class="small-cap"><span class="hide-menu white-text">CUSTOMER PANEL</span></li>
+                            {{-- <li class="small-cap"><span class="hide-menu white-text">CUSTOMER PANEL</span></li> --}}
                             <li><a href="{{ route('home') }}"><i class="ti-home white-text" style="font-size:26px;"></i><span class="hide-menu white-text" style="font-size:16px;">Home</span></a></li>
                             <li><a href="{{route('profile.profile.index')}}"><i class="ti-user white-text" style="font-size:26px;"></i><span class="hide-menu white-text" style="font-size:16px;">Profile</span></a></li>
                             <li><a href="{{route('customer.export')}}"><i class="ti-stats-up white-text" style="font-size:26px;"></i><span class="hide-menu white-text" style="font-size:16px;">Reports</span></a></li>

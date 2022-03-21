@@ -19,7 +19,7 @@
                         <div class="col s6">
                             <div class="input-field">
                                 <div class="col s12">
-                                <h4>Supporting Documents(Site Survey Pictures)</h4>
+                                <h4>Supporting Documents (Site Survey Pictures)</h4>
                                 <div class="mh-a" id="uppySupportingDocuments"></div>
                                     <div class="">
                                         <span class="helper-text imperial-red-text" id="files_error"></span>
@@ -71,7 +71,7 @@
                         <x-DesignCostAddition :projectID=$project_id :design=$type></x-DesignCostAddition>
                     </div>
                     <div class="row center">
-                        <p class="imperial-red-text">We will initiate a hold of ${{$type->latestPrice->price}} when you save this request. The entire amount will only be captured once we send you the design.</p>
+                        <p class="imperial-red-text">We will initiate a hold of ${{$type->latestPrice->price}} when you request this design. The entire amount will only be captured once we send you the design.</p>
                         <button class="btn green" type="button" onclick="insert(this)">Request Design</button>
                         <div class="row">
                             <div class="col s12 m4 offset-m4" id="stripe_card" style="display: none">
@@ -125,7 +125,7 @@
                 target: `#uppySupportingDocuments`,
                 inline: true,
                 hideUploadButton: true,
-                note: "Upto 20 files of 20 MBs each"
+                note: "Upto 20 files of 20 MB each"
             }).use(Uppy.XHRUpload, {
                 endpoint: "{{ env('SUN_STORAGE') }}/file",
                 headers: {
@@ -167,7 +167,7 @@
                 target: `#uppyPermitChange`,
                 inline: true,
                 hideUploadButton: true,
-                note: "Upto 20 files of 20 MBs each"
+                note: "Upto 20 files of 20 MB each"
             }).use(Uppy.XHRUpload, {
                 endpoint: "{{ env('SUN_STORAGE') }}/file",
                 headers: {
@@ -299,7 +299,7 @@
                     }
                 })
             } else {
-                toastr.error('There are some error in your form, please fix them and try again!', '', { positionClass: 'toast-top-right', containerId: 'toast-top-right' });
+                toastr.error('There are some errors in your form, please fix them and try again!', '', { positionClass: 'toast-top-right', containerId: 'toast-top-right' });
                 elem.disabled = false;
             }
         }

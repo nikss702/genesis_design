@@ -58,7 +58,7 @@ class AuroraDesign extends Notification
     public function toArray($notifiable)
     {
         return [
-            'info' => "New Aurora Design!",
+            'info' => "New Aurora Design",
             'project_name' => $this->project_name,
             'route' => $this->link,
         ];

@@ -58,7 +58,7 @@ class PEStampingDesign extends Notification
     public function toArray($notifiable)
     {
         return [
-            'info' => "New PE Stamping Design!",
+            'info' => "New PE Stamping Design",
             'project_name' => $this->project_name,
             'route' => $this->link,
         ];
