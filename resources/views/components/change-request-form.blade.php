@@ -35,7 +35,7 @@
                 target: `#uppy`,
                 inline: true,
                 hideUploadButton: true,
-                note: "Upto 20 files of 20 MBs each"
+                note: "Upto 20 files of 20 MB each"
             }).use(Uppy.XHRUpload, {
                 endpoint: "{{ env('SUN_STORAGE') }}/file",
                 headers: {
@@ -145,8 +145,12 @@
         <div class="row">
             <div class="col s12">
                 <h5>How change requests work</h5>
-                <p>You write down the changes you need to be made in the proposal, our experts then evaluate the changes requested and provide you with a quote of how much it will cost. You'll then have to either accept
-                    thr quote for the work to being on the change request.</p>
+                <ol type="1" class="left-align">
+                    <li>You can mention the required changes.</li>
+                    <li>Our team will evaluate the required changes.</li>
+                    <li>Work on the changes & quote a price.</li>
+                    <li>You can pay and download the files.</li>
+                </ol>
             </div>
         </div>
         <div class="row">

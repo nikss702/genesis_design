@@ -106,9 +106,11 @@ Update Project Details - Genesis Design
 
                     @isset($project)
                         <div class="row">
+                            @if(Auth::user()->role === 'customer')
                             <div class="col s12 center">
                                 <p class="imperial-red-text">Project Information cannot be updated, contact support if you think there is a mistake in the information you've provided. You can still attach new files.</p>
                             </div>
+                            @endif
                         </div>
                     @endisset
 

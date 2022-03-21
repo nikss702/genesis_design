@@ -53,7 +53,7 @@ Customer Details - Genesis Design
                 </div>
                 <div id="createCustomer" class="modal">
                     <div class="modal-content center">
-                        <h4>Add new Customer</h4>
+                        <h4>Add New Customer</h4>
                         <form class="center" method="post" action="@if(Auth::user()->role == 'admin'){{ route('admin.customer.store') }}@else{{ route('manager.customer.store') }}@endif">
                             @csrf
                             <div class="row">

@@ -48,8 +48,8 @@ Customer Project - Reports
                         <thead>
                             <tr class="black-text">
                                 <th>Project Name</th>
-                                <th>Customer City</th>
-                                <th>Customer State</th>
+                                <th>City</th>
+                                <th>State</th>
                                 <th>Created Date</th>
                                 <th>Status</th>
                             </tr>

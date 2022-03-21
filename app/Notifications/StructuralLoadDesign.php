@@ -59,7 +59,7 @@ class StructuralLoadDesign extends Notification
     public function toArray($notifiable)
     {
         return [
-            'info' => "New Structural Load Design!",
+            'info' => "New Structural Load Design",
             'project_name' => $this->project_name,
             'route' => $this->link,
         ];

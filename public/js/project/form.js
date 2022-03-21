@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 target: `#${toSnakeCase(cat.name)}`,
                 inline: true,
                 hideUploadButton: hideUploadButton === 'yes',
-                note: "Upto 20 files of 20 MBs each"
+                note: "Upto 20 files of 20 MB each"
             }).use(Uppy.XHRUpload, {
                 id: cat.name,
                 endpoint: sunStorage + '/file',

@@ -53,7 +53,7 @@ Engineer Details - Genesis Design
                 </div>
                 <div id="createEngineer" class="modal">
                     <div class="modal-content center">
-                        <h4>Add new Engineer</h4>
+                        <h4>Add New Engineer</h4>
                         <form class="center" method="post" action="@if(Auth::user()->role == 'admin'){{ route('admin.engineer.store') }}@else{{ route('manager.engineer.store') }}@endif">
                             @csrf
                             <div class="row">

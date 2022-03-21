@@ -58,7 +58,7 @@ class ElectricalLoadDesign extends Notification
     public function toArray($notifiable)
     {
         return [
-            'info' => "New Electrical Load Design!",
+            'info' => "New Electrical Load Design",
             'project_name' => $this->project_name,
             'route' => $this->link,
         ];

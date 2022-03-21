@@ -58,7 +58,7 @@ class AdminQuote extends Notification
     public function toArray($notifiable)
     {
         return [
-            'info' => 'Change Request Update!',
+            'info' => 'Change Request Update',
             'project_name' => $this->project_name,
             'route' => $this->link,
         ];

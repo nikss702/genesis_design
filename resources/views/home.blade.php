@@ -150,7 +150,6 @@
             <div class="collapsible-header center imperial-red-text">
                 No projects found
             </div>
-            <div class="collapsible-body center">Even more nothingness...</div>
         </li>
     </script>
 @endsection
@@ -191,7 +190,7 @@
                 <div class="col s3">
                     <div class="input-field inline">
                         <input id="project_search" type="text" data-type="projects">
-                        <label for="project_search">Search For Project(s)...</label>
+                        <label for="project_search">Search For Projects</label>
                     </div>
                 </div>
                 <div class="col s3">

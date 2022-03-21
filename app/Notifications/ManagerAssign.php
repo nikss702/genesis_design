@@ -59,7 +59,7 @@ class ManagerAssign extends Notification
     public function toArray($notifiable)
     {
         return [
-            'info' => "Project Assigned!",
+            'info' => "Project Assigned",
             'project_name' => $this->project_name,
             'route' => $this->link,
         ];

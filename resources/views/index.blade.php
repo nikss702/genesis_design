@@ -86,7 +86,7 @@ function getMoreUsers(page) {
                 </div>
                 <div class="col s6 right-align">
                     @if (Auth::user()->role === \App\Statics\Statics::USER_TYPE_CUSTOMER||Auth::user()->role === \App\Statics\Statics::USER_TYPE_ADMIN)
-                        <a href="{{ route('project.bulk') }}"><button class="btn prussian-blue">Multiple Project</button></a>
+                        <a href="{{ route('project.bulk') }}"><button class="btn prussian-blue">Multiple Projects</button></a>
                         <a class="btn prussian-blue dropdown-trigger" data-target='dropdown1'>   Single Project</a>
                         <!-- Dropdown Structure -->
                         <ul id='dropdown1' class='dropdown-content prussian-blue-text'>
@@ -105,7 +105,7 @@ function getMoreUsers(page) {
                     <div class="col s3">
                         <div class="input-field inline">
                             <input id="project_search" type="text" data-type="projects">
-                            <label for="project_search">Search For Project(s)...</label>
+                            <label for="project_search">Search For Projects</label>
                         </div>
                     </div>
                     <div class="col s3">

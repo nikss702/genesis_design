@@ -58,7 +58,7 @@ class CustomerProject extends Notification
     public function toArray($notifiable)
     {
         return [
-            'data' => 'New Project!!',
+            'data' => 'New Project',
         ];
     }
 }

@@ -32,6 +32,10 @@ class CustomerProjectExport implements FromView, ShouldAutoSize, WithEvents
         });
         return [
             AfterSheet::class => function(AfterSheet $event) use($datas){
+                $count = 0;
+                foreach($datas as $data) {
+                    $count += $data->designs->count();
+                }
                 $a='A5:'.'H'.(6+count($datas));
                 $x='A5:H5';
                 $event->sheet->getStyle($x)->applyFromArray([

@@ -58,7 +58,7 @@ class CustomerAcceptQuote extends Notification
     public function toArray($notifiable)
     {
         return [
-            'info' => 'Customer Accepted Quote!',
+            'info' => 'Customer Accepted Quote',
             'project_name' => $this->project_name,
             'route' => $this->link,
         ];

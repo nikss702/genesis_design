@@ -59,7 +59,7 @@ class EngineerProposal extends Notification
     public function toArray($notifiable)
     {
         return [
-            'info' => "New Proposal!",
+            'info' => "New Proposal",
             'project_name' => $this->project_name,
             'route' => $this->link,
         ];

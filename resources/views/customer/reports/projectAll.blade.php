@@ -65,7 +65,7 @@
 
             </td>
             <td align="center">
-                <img src="{{ public_path('assets/images/logo-lightversion.png') }}" alt="Logo" width="250px" height="50px" class="logo"/>
+                <img src="{{ public_path('assets/images/logo-lightversion.png') }}" alt="Logo" width="100px" height="50px" class="logo"/>
             </td>
             <td align="right" style="width: 40%;">
                 <h3>Genesis Design</h3>
@@ -87,20 +87,20 @@
 <br/>
 
 <div class="invoice">
-    <h3>Project Monthly Report</h3>
+    <h3 style="text-transform: uppercase;text-align:center;">PROJECT REPORT FOR THE MONTH OF {{ Carbon\Carbon::now()->format('M') }} - {{ date('Y') }}</h3>
     <table id="invoiceTable" width="100%">
         <thead>
         <tr>
             <th>Project Name</th>
-            <th>Customer City</th>
-            <th>Customer State</th>
+            <th>City</th>
+            <th>State</th>
             <th>Assigned Date</th>
             <th>Status</th>
         </tr>
         </thead>
         <tbody>
             @foreach($projects as $data)
-            <tr>
+            <tr style="text-align:center;">
                 <td>{{ $data->name }}</td>
                 <td>{{ $data->city }}</td>
                 <td>{{ $data->state }}</td>
@@ -120,17 +120,11 @@
     </table>
 </div>
 
-<div class="information" style="position: absolute; bottom: 0;">
-    <table width="100%">
+<div class="" style="position: absolute; bottom: 0;padding:20px;background-color:#1D3557;color:#fff;width:100%;">
+    <table>
         <tr>
-            <td align="left" style="width: 50%;">
+            <td>
                 &copy; {{ date('Y') }} {{ config('app.url') }} - All rights reserved.
-            </td>
-            <td align="center" style="width:50%;">
-
-            </td>
-            <td align="right" style="width: 50%;">
-                Company Slogan
             </td>
         </tr>
     </table>

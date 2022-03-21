@@ -48,7 +48,7 @@ class Statics
 
 //    Status Types
     const STATUS_ACTIVE = "active";
-    const STATUS_IN_ACTIVE = "in active";
+    const STATUS_IN_ACTIVE = "inactive";
 
     const STATUSES = [self::STATUS_ACTIVE, self::STATUS_IN_ACTIVE];
 

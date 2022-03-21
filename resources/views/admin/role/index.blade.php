@@ -34,7 +34,7 @@ Roles - Genesis Design
                         </thead>
                         <tbody>
                             @foreach($roles as $role)
-                            <tr>
+                            <tr class="capitalize">
                                 <td>{{ $role->name }}</td>
                                 <td>
                                     <a href="{{ route('admin.roles.show', $role->id) }}">

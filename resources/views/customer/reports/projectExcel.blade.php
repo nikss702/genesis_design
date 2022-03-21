@@ -28,13 +28,13 @@
         @foreach($project->designs as $design)
         <tr>
             <td>
-                {{$project['name']}}
+                {{ ucwords(strtolower($project['name']))}}
             </td>
             <td>    
                 {{$project['assigned_date']}}
             </td>
             <td>    
-                {{$design->type['name']}}
+                {{ ucwords(strtolower($design->type['name']))}}
             </td>
             <td>    
                 {{$design['start_date']}}
@@ -43,7 +43,7 @@
                 {{$design['end_date']}}
             </td>
             <td>    
-                {{$design['status_engineer']}}
+                {{ucwords(strtolower($design['status_engineer']))}}
             </td>
             <td>    
                 $ {{$design['price']}}

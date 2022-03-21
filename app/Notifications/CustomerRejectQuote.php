@@ -58,7 +58,7 @@ class CustomerRejectQuote extends Notification
     public function toArray($notifiable)
     {
         return [
-            'info' => 'Customer Rejected Quote!',
+            'info' => 'Customer Rejected Quote',
             'project_name' => $this->project_name,
             'route' => $this->link,
         ];
