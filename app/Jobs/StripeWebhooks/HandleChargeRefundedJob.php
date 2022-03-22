@@ -19,6 +19,7 @@ class HandleChargeRefundedJob implements ShouldQueue
      *
      * @return void
      */
+     public $webhookCall;
     public function __construct(WebhookCall $webhookCall)
     {
         $this->webhookCall = $webhookCall;

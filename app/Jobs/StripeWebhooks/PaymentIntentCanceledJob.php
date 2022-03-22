@@ -8,7 +8,8 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Spatie\WebhookClient\Models\WebhookCall;
-
+use App\Statics\Statics;
+use App\SystemDesign;
 class PaymentIntentCanceledJob implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
@@ -18,6 +19,7 @@ class PaymentIntentCanceledJob implements ShouldQueue
      *
      * @return void
      */
+     public $webhookCall;
     public function __construct(WebhookCall $webhookCall)
     {
         $this->webhookCall = $webhookCall;

@@ -70,7 +70,7 @@
             <td align="right" style="width: 40%;">
                 <h3>Genesis Design</h3>
                 <pre>
-                    https://company.com
+                {{ config('app.url') }}
                     Street 26
                     123456 City
                     United Kingdom
@@ -128,17 +128,11 @@
     </table>
 </div>
 
-<div class="information" style="position: absolute; bottom: 0;">
-    <table width="100%">
+<div class="" style="position: absolute; bottom: 0;padding:20px;background-color:#1D3557;color:#fff;width:100%;">
+    <table>
         <tr>
-            <td align="left" style="width: 50%;">
+            <td>
                 &copy; {{ date('Y') }} {{ config('app.url') }} - All rights reserved.
-            </td>
-            <td align="center" style="width:50%;">
-
-            </td>
-            <td align="right" style="width: 50%;">
-                Company Slogan
             </td>
         </tr>
     </table>
