@@ -1404,8 +1404,11 @@ function toggleSystemSize(elem) {
             };
         }
         // insert files and project
+        var count=0;
         function insert(elem) {
-            
+            count++;
+        if(count==1)
+        {
             const overhang = document.getElementById('overhang').value;
             const width = document.getElementById('width').value;
             const height = document.getElementById('height').value;
@@ -1483,6 +1486,16 @@ function toggleSystemSize(elem) {
                 toastr.error('There are some errors in your form, please fix them and try again!', '', { positionClass: 'toast-top-right', containerId: 'toast-top-right' });
                 elem.disabled = false;
             }
+        }
+        else
+        {
+            toastr.success('Submission In Process Please Wait!', '', { positionClass: 'toast-top-right', containerId: 'toast-top-right' });
+            if(count>5)
+            {
+                toastr.info('Form Failed To Submit  Try Again!', '', { positionClass: 'toast-top-right', containerId: 'toast-top-right' });
+             
+            }
+        }
         }
     </script>
 @endsection
