@@ -171,12 +171,12 @@
 
 @section('js')
 <script>
-    function setStatus(a){
+    function setStatus(){
         //alert(a.value);
         var status = document.getElementById("statusOption").value;
         var id = {{ $design->id }};
         var _token=$('input[name="_token"]').val();
-        var otherInput = document.getElementById("holdStatusOption");
+       
         var note  = document.getElementById("holdStatusNote").value;
         // alert(note);
         // alert(_token);

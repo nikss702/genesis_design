@@ -64,7 +64,6 @@ class ProjectController extends Controller
     public function setStatus(Request $request){
         $design = SystemDesign::findOrFail($request->designId);
         //return $design;
-        
         $design->note = $request->statusNote;
         if($request->statusName == Statics::DESIGN_STATUS_ENGINEER_HOLD){
             $design->start_date = Carbon::now();
@@ -75,7 +74,7 @@ class ProjectController extends Controller
             $design->status_engineer = Statics::DESIGN_STATUS_ENGINEER_PROGRESS;
             $design->status_customer = Statics::DESIGN_STATUS_CUSTOMER_PROGRESS;
         }
-        $design->update();
+        $design->save();
         $managers = User::whereHas(
             'roles', function($q){
                 $q->where('name', 'manager');

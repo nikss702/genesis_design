@@ -234,11 +234,15 @@ public function assign(Request $request)
             'project_status' => Statics::PROJECT_STATUS_ASSIGNED,
             'assigned_date' => Carbon::now(),
         ]);
-        $system_design=SystemDesign::findOrFail($request->design_id);
-        $system_design->status_customer = Statics::DESIGN_STATUS_CUSTOMER_PROGRESS;
-        $system_design->status_engineer = Statics::DESIGN_STATUS_ENGINEER_ASSIGNED;
-        $system_design->save();
-        
+        foreach ($project->designs as $design)
+        {
+            if ($design->status_engineer === Statics::DESIGN_STATUS_ENGINEER_NOT_ASSIGNED)
+            {
+                $design->status_customer = Statics::DESIGN_STATUS_CUSTOMER_PROGRESS;
+                $design->status_engineer = Statics::DESIGN_STATUS_ENGINEER_ASSIGNED;
+                $design->save();
+            }
+        }
         $project=Project::findOrFail($request->project_id);
         $engineer_mail=$project->engineer->email;
         Mail::to($project->engineer->email)

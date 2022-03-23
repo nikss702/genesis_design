@@ -660,7 +660,7 @@ const sendFileToDb = function (file, response) {
     }).then(response => {
         if (response.status === 200 || response.status === 201) {
             console.log(response.data);
-            toastr.success('Files Uploaded!', '', { positionClass: 'toast-top-right', containerId: 'toast-top-right' });
+            toastr.success('Files Uploaded', '', { positionClass: 'toast-top-right', containerId: 'toast-top-right' });
         } else {
             toastr.error('There was a error uploading images. Please try again!', '', { positionClass: 'toast-top-right', containerId: 'toast-top-right' });
             console.error(response);

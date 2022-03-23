@@ -129,7 +129,7 @@ class DesignRequestController extends Controller
             $sd->system_design_type_id = $type->id;
             $sd->project_id = $project->id;
             $designs_count=Project::findOrFail($project->id)->designs->count();
-            if($designs_count>0)
+           if($project->engineer_id!="")
             {
                 $sd->status_customer = Statics::DESIGN_STATUS_CUSTOMER_PROGRESS;
                 $sd->status_engineer = Statics::DESIGN_STATUS_ENGINEER_PROGRESS;
@@ -203,7 +203,7 @@ class DesignRequestController extends Controller
             $sd->system_design_type_id = $type->id;
             $sd->project_id = $project->id;
             $designs_count=Project::findOrFail($project->id)->designs->count();
-            if($designs_count>0)
+           if($project->engineer_id!="")
             {
                 $sd->status_customer = Statics::DESIGN_STATUS_CUSTOMER_PROGRESS;
                 $sd->status_engineer = Statics::DESIGN_STATUS_ENGINEER_PROGRESS;
@@ -276,7 +276,7 @@ class DesignRequestController extends Controller
             $sd->system_design_type_id = $type->id;
             $sd->project_id = $project->id;
             $designs_count=Project::findOrFail($project->id)->designs->count();
-            if($designs_count>0)
+           if($project->engineer_id!="")
             {
                 $sd->status_customer = Statics::DESIGN_STATUS_CUSTOMER_PROGRESS;
                 $sd->status_engineer = Statics::DESIGN_STATUS_ENGINEER_PROGRESS;
@@ -341,7 +341,7 @@ class DesignRequestController extends Controller
             $sd->system_design_type_id = $type->id;
             $sd->project_id = $project->id;
             $designs_count=Project::findOrFail($project->id)->designs->count();
-            if($designs_count>0)
+           if($project->engineer_id!="")
             {
                 $sd->status_customer = Statics::DESIGN_STATUS_CUSTOMER_PROGRESS;
                 $sd->status_engineer = Statics::DESIGN_STATUS_ENGINEER_PROGRESS;
@@ -406,7 +406,7 @@ class DesignRequestController extends Controller
             $sd->system_design_type_id = $type->id;
             $sd->project_id = $project->id;
             $designs_count=Project::findOrFail($project->id)->designs->count();
-            if($designs_count>0)
+           if($project->engineer_id!="")
             {
                 $sd->status_customer = Statics::DESIGN_STATUS_CUSTOMER_PROGRESS;
                 $sd->status_engineer = Statics::DESIGN_STATUS_ENGINEER_PROGRESS;
@@ -523,16 +523,16 @@ class DesignRequestController extends Controller
             $sd->system_design_type_id = $type->id;
             $sd->project_id = $project->id;
             $designs_count=Project::findOrFail($project->id)->designs->count();
-            // if($designs_count>0)
-            // {
-            //     $sd->status_customer = Statics::DESIGN_STATUS_CUSTOMER_PROGRESS;
-            //     $sd->status_engineer = Statics::DESIGN_STATUS_ENGINEER_PROGRESS;
-            // }
-            // else
-            // {
+            if($project->engineer_id!="")
+            {
+                $sd->status_customer = Statics::DESIGN_STATUS_CUSTOMER_PROGRESS;
+                $sd->status_engineer = Statics::DESIGN_STATUS_ENGINEER_PROGRESS;
+            }
+            else
+            {
                 $sd->status_customer = Statics::DESIGN_STATUS_CUSTOMER_REQUESTED;
                 $sd->status_engineer = Statics::DESIGN_STATUS_ENGINEER_NOT_ASSIGNED;
-            // }
+            }
             
             $sd->price = $type->latestPrice->price;
             $sd->fields = $request->only(["annual_usage", "installation", "hoa", "max_offset", "project_id", "notes", "remarks", "system_size", "module", "moduleType", "moduleOther", "racking", "rackingType", "rackingOther", "inverter", "inverterType", "inverterOther", "monitor", "monitorType", "monitorOther"]);
@@ -557,16 +557,16 @@ class DesignRequestController extends Controller
                 $sd->system_design_type_id = $type->id;
                 $sd->project_id = $project->id;
                 $designs_count=Project::findOrFail($project->id)->designs->count();
-                // if($designs_count>0)
-                // {
-                //     $sd->status_customer = Statics::DESIGN_STATUS_CUSTOMER_PROGRESS;
-                //     $sd->status_engineer = Statics::DESIGN_STATUS_ENGINEER_PROGRESS;
-                // }
-                // else
-                // {
-                    $sd->status_customer = Statics::DESIGN_STATUS_CUSTOMER_REQUESTED;
-                    $sd->status_engineer = Statics::DESIGN_STATUS_ENGINEER_NOT_ASSIGNED;
-                // }
+                if($project->engineer_id!="")
+            {
+                $sd->status_customer = Statics::DESIGN_STATUS_CUSTOMER_PROGRESS;
+                $sd->status_engineer = Statics::DESIGN_STATUS_ENGINEER_PROGRESS;
+            }
+            else
+            {
+                $sd->status_customer = Statics::DESIGN_STATUS_CUSTOMER_REQUESTED;
+                $sd->status_engineer = Statics::DESIGN_STATUS_ENGINEER_NOT_ASSIGNED;
+            }
                 $sd->price = $type->latestPrice->price;
                 $sd->fields = $request->fields;
                 $sd->stripe_payment_code = $request->stripe_payment_structural;
@@ -593,16 +593,16 @@ class DesignRequestController extends Controller
             $sd->system_design_type_id = $type->id;
             $sd->project_id = $project->id;
             $designs_count=Project::findOrFail($project->id)->designs->count();
-            // if($designs_count>0)
-            // {
-            //     $sd->status_customer = Statics::DESIGN_STATUS_CUSTOMER_PROGRESS;
-            //     $sd->status_engineer = Statics::DESIGN_STATUS_ENGINEER_PROGRESS;
-            // }
-            // else
-            // {
+            if($project->engineer_id!="")
+            {
+                $sd->status_customer = Statics::DESIGN_STATUS_CUSTOMER_PROGRESS;
+                $sd->status_engineer = Statics::DESIGN_STATUS_ENGINEER_PROGRESS;
+            }
+            else
+            {
                 $sd->status_customer = Statics::DESIGN_STATUS_CUSTOMER_REQUESTED;
                 $sd->status_engineer = Statics::DESIGN_STATUS_ENGINEER_NOT_ASSIGNED;
-            // }
+            }
             $sd->price = $type->latestPrice->price;
             $sd->fields = $request->only(["structural_letter", "electrical_stamps"]);
             $sd->stripe_payment_code = $request->stripe_payment_stamping;
@@ -632,9 +632,16 @@ class DesignRequestController extends Controller
             $sd->project_id = $project->id;
             $designs_count=Project::findOrFail($project->id)->designs->count();
             
-            $sd->status_customer = Statics::DESIGN_STATUS_CUSTOMER_REQUESTED;
-            $sd->status_engineer = Statics::DESIGN_STATUS_ENGINEER_NOT_ASSIGNED;
-            
+            if($project->engineer_id!="")
+            {
+                $sd->status_customer = Statics::DESIGN_STATUS_CUSTOMER_PROGRESS;
+                $sd->status_engineer = Statics::DESIGN_STATUS_ENGINEER_PROGRESS;
+            }
+            else
+            {
+                $sd->status_customer = Statics::DESIGN_STATUS_CUSTOMER_REQUESTED;
+                $sd->status_engineer = Statics::DESIGN_STATUS_ENGINEER_NOT_ASSIGNED;
+            }
             $sd->price = $type->latestPrice->price;
             $sd->fields = $request->only(["system_size", "hoa", "installation", "remarks", "module", "moduleType", "moduleOther", "inverter", "inverterType", "inverterOther", "racking", "rackingType", "rackingOther", "monitor", "monitorType", "monitorOther", "utility", "tree_cutting", "re_roofing", "service_upgrade", "others", "array", "plywood", "osb", "skip_sheating", "plank", "roofDecking_LayerThickness", "center_spacing", "purlin", "pitch", "azimuth", "rafter_size", "roofMaterialOption", "other_roof_material", "soft_spots", "bouncy", "existing_leaks", "vaulted_ceiling", "comp_shingle_layers", "age_of_shingles", "roof_condition", "access_attic_vent", "stud_finder", "supply_side_voltage", "manufacturer_model", "main_breaker_rating", "busbar_rating", "meter_no", "proposed_point_connection", "meter_location", "tap_possible", "breaker_space", "grounding_method", "disconnect_type", "panel_location", "manufacturer_model1[]", "main_breaker_rating1[]", "busbar_rating1[]", "average_bill", "average_bill1"]);
             $sd->stripe_payment_code = $request->stripe_payment_permit;
@@ -660,16 +667,16 @@ class DesignRequestController extends Controller
                 $sd->system_design_type_id = $type->id;
                 $sd->project_id = $project->id;
                 $designs_count=Project::findOrFail($project->id)->designs->count();
-                // if($designs_count>0)
-                // {
-                //     $sd->status_customer = Statics::DESIGN_STATUS_CUSTOMER_PROGRESS;
-                //     $sd->status_engineer = Statics::DESIGN_STATUS_ENGINEER_PROGRESS;
-                // }
-                // else
-                // {
-                    $sd->status_customer = Statics::DESIGN_STATUS_CUSTOMER_REQUESTED;
-                    $sd->status_engineer = Statics::DESIGN_STATUS_ENGINEER_NOT_ASSIGNED;
-                // }
+                if($project->engineer_id!="")
+            {
+                $sd->status_customer = Statics::DESIGN_STATUS_CUSTOMER_PROGRESS;
+                $sd->status_engineer = Statics::DESIGN_STATUS_ENGINEER_PROGRESS;
+            }
+            else
+            {
+                $sd->status_customer = Statics::DESIGN_STATUS_CUSTOMER_REQUESTED;
+                $sd->status_engineer = Statics::DESIGN_STATUS_ENGINEER_NOT_ASSIGNED;
+            }
                 $sd->price = $type->latestPrice->price;
                 $sd->fields = $request->only(["average_bill", "average_bill1"]);
                 $sd->stripe_payment_code = $request->stripe_payment_electrical;
