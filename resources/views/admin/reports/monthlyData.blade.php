@@ -22,7 +22,7 @@
                                     </td>
                                    
                                     <td class="capitalize">
-                                        {{$weekly->customer->first_name}}{{$weekly->customer->last_name}}
+                                        {{$weekly->customer->first_name}}&nbsp;{{$weekly->customer->last_name}}
                                     </td>
                                     <td class="capitalize">
                                         @if($weekly->engineer_id == "")
@@ -60,7 +60,7 @@
                                     </td>
                                    
                                     <td class="capitalize">
-                                        {{$weekly->customer->first_name}}{{$weekly->customer->last_name}}
+                                        {{$weekly->customer->first_name}}&nbsp;{{$weekly->customer->last_name}}
                                     </td>
                                     <td class="capitalize">
                                         @if($weekly->engineer_id == "")

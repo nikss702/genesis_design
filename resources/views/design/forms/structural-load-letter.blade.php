@@ -101,7 +101,7 @@
             }).then(response => {
                 if (response.status === 200 || response.status === 201) {
                     console.log(response.db_response);
-                    toastr.success('Images Uploaded!', '', { positionClass: 'toast-top-right', containerId: 'toast-top-right' });
+                    toastr.success('Images Uploaded', '', { positionClass: 'toast-top-right', containerId: 'toast-top-right' });
                     // M.toast({
                     //     html: "Images uploaded",
                     //     classes: "green"
@@ -278,7 +278,7 @@
                                     uploadFiles(response.data.id);
                                     if (fileCount === 0)
                                         window.location = "{{route('design.list', $project_id)}}";
-                                        toastr.success('Design Submitted!', '', { positionClass: 'toast-top-right', containerId: 'toast-top-right' });
+                                        toastr.success('Design Submitted', '', { positionClass: 'toast-top-right', containerId: 'toast-top-right' });
                                         // M.toast({
                                         //     html: "Design Submitted",
                                         //     classes: "green"

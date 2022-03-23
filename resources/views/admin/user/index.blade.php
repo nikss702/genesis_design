@@ -42,7 +42,7 @@ Users - Genesis Design
                                 <td>{{ $data->first_name }} {{ $data->last_name }}</td>
                                 <td>{{ $data->email }}</td>
                                 <td>{{ $data->company }}</td>
-                                <td>{{ $data->role }}</td>
+                                <td class="capitalize">{{ $data->role }}</td>
                                 <td>{{ Carbon\Carbon::parse($data->created_at)->format('d M Y') }}</td>
                                 <td>
                                     <a href="{{ route('admin.users.edit', $data->id) }}">
