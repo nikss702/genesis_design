@@ -26,13 +26,13 @@
                                        {{$design->type->name}}
                                     </td>
                                     <td class="capitalize">
-                                        {{$weekly->customer->first_name}}{{$weekly->customer->last_name}}
+                                        {{$weekly->customer->first_name}}&nbsp;{{$weekly->customer->last_name}}
                                     </td>
                                     <!-- <td>
                                         @if($weekly->engineer_id == "")
                                             <span class="helper-text red-text">Not Assigned</span>
                                         @else
-                                            {{ $weekly->engineer->first_name }} {{ $weekly->engineer->last_name }}
+                                            {{ $weekly->engineer->first_name }}&nbsp;{{ $weekly->engineer->last_name }}
                                         @endif
                                     </td> -->
                                   
