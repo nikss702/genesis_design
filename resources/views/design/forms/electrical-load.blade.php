@@ -43,8 +43,8 @@
                                             <select id="selectItem1" multiple onchange="getSelectedValue('1')">
                                                 <option value="" disabled>Choose your option</option>
                                                 <option value="Refrigerator_w_freezer">Refrigerator w/freezer</option>
-                                                <option value="Freezer-Chest">Freezer - Chest</option>
-                                                <option value="Freezer-Upright">Freezer - Upright</option>
+                                                <option value="Freezer_Chest">Freezer - Chest</option>
+                                                <option value="Freezer_Upright">Freezer - Upright</option>
                                                 <option value="Dishwasher">Dishwasher</option>
                                                 <option value="Range">Range</option>
                                                 <option value="Oven">Oven</option>
@@ -52,7 +52,7 @@
                                                 <option value="Toaster_oven">Toaster oven</option>
                                                 <option value="Coffee_maker">Coffee maker</option>
                                                 <option value="Garbage_disposal">Garbage disposal</option>
-                                                <option value="Well_pump_1/2_HP">Well pump 1/2 HP</option>
+                                                <option value="Well_pump_1_2_HP">Well pump 1/2 HP</option>
                                             </select>
                                             <label>Kitchen</label>
                                         </div>
@@ -85,12 +85,12 @@
                                             <select id="selectItem2" multiple onchange="getSelectedValue('2')">
                                                 <option value="" disabled>Choose your option</option>
                                                 <option value="Stereo">Stereo</option>
-                                                <option value="TV-small(up_to_19)">TV - small (up to 19)</option>
-                                                <option value="TV-medium(up_to_27)">TV - medium (up to 27)</option>
-                                                <option value="TV-large(greater_than_27)">TV - large (greater than 27)</option>
-                                                <option value="TV-27_LCD_Flat_Screen">TV - 27 LCD Flat Screen</option>
-                                                <option value="TV-42Plasma">TV - 42 Plasma</option>
-                                                <option value="VCR/DVD">VCR/DVD</option>
+                                                <option value="TV_small(up_to_19)">TV - small (up to 19)</option>
+                                                <option value="TV_medium(up_to_27)">TV - medium (up to 27)</option>
+                                                <option value="TV_large(greater_than_27)">TV - large (greater than 27)</option>
+                                                <option value="TV_27_LCD_Flat_Screen">TV - 27 LCD Flat Screen</option>
+                                                <option value="TV_42Plasma">TV - 42 Plasma</option>
+                                                <option value="VCR_DVD">VCR/DVD</option>
                                                 <option value="Cable_box">Cable box</option>
                                                 <option value="Satellite_dish">Satellite dish</option>
                                                 <option value="Computer_and_printer">Computer and printer</option>
