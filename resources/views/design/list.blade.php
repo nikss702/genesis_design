@@ -477,7 +477,7 @@
                 <ul class="collapsible popout" id="pagination_target"></ul>
             </div>
         </div>
-        <div class="row">
+        {{-- <div class="row">
             <div class="col s12 center-on-small-only right-on-lg-and-up">
                 <a class="btn-flat tooltipped waves-effect" data-position="top" data-tooltip="Previous Page" onclick="prevPage()">
                     <i class="fal fa-angle-left"></i>
@@ -486,7 +486,7 @@
                     <i class="fal fa-angle-right"></i>
                 </button>
             </div>
-        </div>
+        </div> --}}
     </div>
 
 

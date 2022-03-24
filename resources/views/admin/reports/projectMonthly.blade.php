@@ -101,9 +101,9 @@
         </thead>
         <tbody>
             @foreach($projects as $data)
-            <tr>
+            <tr style="text-transform:capitalize;">
                 <td>{{ $data->name }}</td>
-                <td class="capitalize">{{ $data->customer->first_name }} {{ $data->customer->last_name }}</td>
+                <td>{{ $data->customer->first_name }} {{ $data->customer->last_name }}</td>
                 <td>
                     @if($data->engineer_id == "")
                         <span class="red-text">Not yet assigned</span>

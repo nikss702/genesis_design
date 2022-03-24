@@ -141,11 +141,13 @@ Update Project Details - Genesis Design
                             @unless($project)
                                 <button type="button" class="btn imperial-red-outline-button" onclick="insert()">Create&nbsp;project</button>
                             @endunless
-                            @if($project && $project->status !== \App\Statics\Statics::PROJECT_STATUS_ARCHIVED)
-                                <form action="{{route('project.archive', $project->id)}}" method="post">
-                                    @csrf
-                                    <button type="submit" class="btn imperial-red-outline-button m-xxxs">Archive Project</button>
-                                </form>
+                            @if(Auth::user()->role == 'customer')
+                                @if($project && $project->status !== \App\Statics\Statics::PROJECT_STATUS_ARCHIVED)
+                                    <form action="{{route('project.archive', $project->id)}}" method="post">
+                                        @csrf
+                                        <button type="submit" class="btn imperial-red-outline-button m-xxxs">Archive Project</button>
+                                    </form>
+                                @endif
                             @endif
                             @if($project)
                                 <a class="btn imperial-red-outline-button m-xxxs" href="{{route('engineer.design.list', $project->id)}}">View Designs</a>

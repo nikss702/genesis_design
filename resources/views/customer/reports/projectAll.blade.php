@@ -100,7 +100,7 @@
         </thead>
         <tbody>
             @foreach($projects as $data)
-            <tr style="text-align:center;">
+            <tr style="text-align:center;text-transform:capitalize;">
                 <td>{{ $data->name }}</td>
                 <td>{{ $data->city }}</td>
                 <td>{{ $data->state }}</td>

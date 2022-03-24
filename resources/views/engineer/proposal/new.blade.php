@@ -143,7 +143,7 @@
                     }
                 }).then(response => {
                     if (response.status === 200 || response.status === 201) {
-                        toastr.success('Proposal Uploaded!', '', { positionClass: 'toast-top-right', containerId: 'toast-top-right' });
+                        toastr.success('Proposal Uploaded', '', { positionClass: 'toast-top-right', containerId: 'toast-top-right' });
                         // M.toast({
                         //     html: "Proposal Iploaded",
                         //     classes: "steel-blue"
