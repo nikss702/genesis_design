@@ -25,7 +25,7 @@
                                 <td> No Design</td>
                               
                                 <td class="capitalize">
-                                @if($data->status == 'in active')
+                                @if($data->status == 'inactive')
                                     <span class="label label-red capitalize"> {{ $data->status }}</span>
                                 @else
                                     <span class="label label-success capitalize"> {{ $data->status }}</span>
@@ -79,7 +79,7 @@
                                    abc
                                 </td> -->
                                 <td class="capitalize">
-                                @if($data->status == 'in active')
+                                @if($data->status == 'inactive')
                                     <span class="label label-red capitalize"> {{ $data->status }}</span>
                                 @else
                                     <span class="label label-success capitalize"> {{ $data->status }}</span>

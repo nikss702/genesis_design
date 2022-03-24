@@ -43,7 +43,7 @@
                                     </td>
                                     <td> <label class="label label-inverse white-text"> --- </label> </td>
                                     <td>
-                                        @if($weekly->status == 'in active')
+                                        @if($weekly->status == 'inactive')
                                             <span class="label label-red capitalize">{{ $weekly->status }}</span>
                                         @else
                                             <span class="label label-success capitalize">{{ $weekly->status }}</span>
@@ -81,7 +81,7 @@
                                     </td>
                                     <td class="capitalize"> {{ $design->status_engineer }} </td>
                                     <td>
-                                        @if($weekly->status == 'in active')
+                                        @if($weekly->status == 'inactive')
                                             <span class="label label-red capitalize">{{ $weekly->status }}</span>
                                         @else
                                             <span class="label label-success capitalize">{{ $weekly->status }}</span>

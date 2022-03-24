@@ -207,7 +207,7 @@ Manager Home - Genesis Design
                                         {{ \Carbon\Carbon::parse( $weekly->updated_at)->format('d M, Y') }}
                                     </td>
                                     <td>
-                                        @if($weekly->status == 'in active')
+                                        @if($weekly->status == 'inactive')
                                             <span class="label label-red capitalize">{{ $weekly->status }}</span>
                                         @else
                                             <span class="label label-success capitalize">{{ $weekly->status }}</span>
@@ -248,7 +248,7 @@ Manager Home - Genesis Design
                 // tableRow = "";
 
                 // for(i=0;i<data.length;i++){
-                //     tableRow += "<tr><td>"+data[i]['name']+"</a></td><td>"+data[i]['first_name']+data[i]['last_name']+"</td><td>"+data[i]['engineer_id']+"</td><td>"+data[i]['assigned_date']+"</td><td>"+data[i]['created_at']+"</td><td> @if("+data[i][status]+" == 'in active') <span class='label label-red capitalize'>"+data[i]['status']+" / "+data[i]['project_status']+"</span> @else <span class='label label-success capitalize'>"+data[i]['status']+" / "+data[i]['project_status']+"</span> @endif </td></tr>";
+                //     tableRow += "<tr><td>"+data[i]['name']+"</a></td><td>"+data[i]['first_name']+data[i]['last_name']+"</td><td>"+data[i]['engineer_id']+"</td><td>"+data[i]['assigned_date']+"</td><td>"+data[i]['created_at']+"</td><td> @if("+data[i][status]+" == 'inactive') <span class='label label-red capitalize'>"+data[i]['status']+" / "+data[i]['project_status']+"</span> @else <span class='label label-success capitalize'>"+data[i]['status']+" / "+data[i]['project_status']+"</span> @endif </td></tr>";
                 // }
                 $("#monthlyData").html(data);
             }

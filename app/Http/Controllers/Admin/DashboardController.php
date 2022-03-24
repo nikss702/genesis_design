@@ -25,7 +25,7 @@ class DashboardController extends Controller
         $customerCount = User::where('role', 'customer')->count();
         $engineerCount = User::where('role', 'engineer')->count();
         $projectsActive = Project::where('status', 'active')->count();
-        $projectsInActive = Project::where('status', 'in active')->count();
+        $projectsInActive = Project::where('status', 'inactive')->count();
         $designsAssigned = SystemDesign::where('status_engineer', Statics::DESIGN_STATUS_ENGINEER_ASSIGNED)->count();
         $designsNotAssigned = SystemDesign::where('status_engineer', Statics::DESIGN_STATUS_ENGINEER_NOT_ASSIGNED)->count();
         $projectsHold = Project::where('project_status', Statics::PROJECT_STATUS_ON_HOLD)->count();

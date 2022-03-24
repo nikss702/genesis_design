@@ -116,7 +116,7 @@
                     {{ \Carbon\Carbon::parse( $data->updated_at)->format('d M, Y') }}
                 </td>
                 <td>
-                    @if($data->status == 'in active')
+                    @if($data->status == 'inactive')
                         <span class="label label-red capitalize">{{ $data->status }} / {{ $data->project_status }}</span>
                     @else
                         <span class="label label-success capitalize">{{ $data->status }} / {{ $data->project_status }}</span>
