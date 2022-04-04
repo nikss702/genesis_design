@@ -83,7 +83,7 @@ class RegisterController extends Controller
         $intent = null;
         $customer = null;
         if (!$validation->fails()) {
-            Stripe::setApiKey('sk_test_QRlgi66jX7UyI2ZABx7tX96s00mVjwISwc');
+            Stripe::setApiKey(env('STRIPE_SECRET'));
             $customer = Customer::create([
                 "email" => "pending.registeration@genesis.io"
             ]);
@@ -108,7 +108,7 @@ class RegisterController extends Controller
         $company->name = $data['company'];
         $company->save();
 
-        Stripe::setApiKey('sk_test_QRlgi66jX7UyI2ZABx7tX96s00mVjwISwc');
+        Stripe::setApiKey(env('STRIPE_SECRET'));
         Customer::update(
             $data['stripe_id'],
             [

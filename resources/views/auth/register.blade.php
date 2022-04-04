@@ -125,7 +125,7 @@
         let cardElement;
         let jsonData = {};
         document.addEventListener('DOMContentLoaded', function () {
-            stripe = Stripe('pk_test_j6ygL4Z0meZGJwZ16QT8nR0i00vuQ0k3NE');
+            stripe = Stripe("{{env('STRIPE_KEY')}}");
             elements = stripe.elements();
             cardElement = elements.create('card', {
                 iconStyle: 'solid',
