@@ -19,7 +19,7 @@ Details {{ $role->name }} - Genesis Design
 			@csrf
             @method('PUT')
             <div class="input-field">
-                <input id="role_name" type="text" class="validate @error('role_name') invalid @enderror" name="role_name" value="{{ $role->name }}" required autocomplete="role name">
+                <input id="role_name" type="text" class="validate @error('role_name') invalid @enderror" name="role_name" value="{{ $role->name }}" required autocomplete="role name" readonly>
                 <label for="role_name">Role Name</label>
                 @error('role_name')
                     <span class="invalid-feedback">{{ $message }}</span>

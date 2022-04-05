@@ -28,21 +28,33 @@ class HomeController extends Controller
     public function index()
     {
         $return = null;
+        
         switch (Auth::user()->role) {
-            case (Statics::USER_TYPE_CUSTOMER || Statics::USER_TYPE_ENGINEER):
+            case (Statics::USER_TYPE_CUSTOMER):
                 $types = ProjectType::where('is_hidden', false)->get();
                 $user_id=Auth::user()->id;
                 if(Auth::user()->hasRole('customer'))
                 $projectQuery = Auth::user()->projects()->latest()->paginate(3);
                 else
                 $projectQuery = Auth::user()->assignedProjects()->latest()->paginate(3);
-       
                 $return = view('index')->with('projectQuery', $projectQuery)->with('projectTypes',$types);
                 break;
-            case (Statics::USER_TYPE_ADMIN):
+            case (Statics::USER_TYPE_ENGINEER):
                 $types = ProjectType::where('is_hidden', false)->get();
-                $return = view('admin.home')->with('projectTypes', $types);
+                $user_id=Auth::user()->id;
+                if(Auth::user()->hasRole('customer'))
+                $projectQuery = Auth::user()->projects()->latest()->paginate(3);
+                else
+                $projectQuery = Auth::user()->assignedProjects()->latest()->paginate(3);
+                $return = view('index')->with('projectQuery', $projectQuery)->with('projectTypes',$types);
                 break;
+
+            case (Statics::USER_TYPE_ADMIN):
+                $return = redirect(url('admin/home'));
+                break;
+            case (Statics::USER_TYPE_MANAGER):
+                    $return = redirect(url('manager/home'));
+                    break;
         }
 
         return $return;

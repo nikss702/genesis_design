@@ -69,7 +69,7 @@ class ProposalController extends Controller
 
 //         This is the first proposal
         if (sizeof($design->proposals) === 0) {
-            if (!$design->paymant_date) {
+            if (!$design->payment_date) {
                 $capture = $this->capture($design->stripe_payment_code);
                 
                 if ($capture->status != 'succeeded')

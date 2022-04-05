@@ -76,7 +76,7 @@
             }).then(response => {
                 if (response.status === 200 || response.status === 201) {
                     console.log(response.data);
-                    toastr.success('Image Uploaded!', '', { positionClass: 'toast-top-right', containerId: 'toast-top-right' });
+                    toastr.success('Image Uploaded', '', { positionClass: 'toast-top-right', containerId: 'toast-top-right' });
                     filesUploaded++;
                     if (filesUploaded === fileCount)
                         window.location.reload();
@@ -108,7 +108,7 @@
                     }
                 }).then(response => {
                     if (response.status === 200 || response.status === 201) {
-                        toastr.success('Change Request Sent!', '', { positionClass: 'toast-top-right', containerId: 'toast-top-right' });
+                        toastr.success('Change Request Sent', '', { positionClass: 'toast-top-right', containerId: 'toast-top-right' });
                     } else {
                         toastr.error('There was a error sending the message. Please try again!', '', { positionClass: 'toast-top-right', containerId: 'toast-top-right' });
                     }
