@@ -15,6 +15,11 @@ use Illuminate\Http\Request;
 use Stripe\Customer;
 use Stripe\SetupIntent;
 use Stripe\Stripe;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\Notification;
+use App\Notifications\NewCustomerLogin;
 
 class RegisterController extends Controller
 {
@@ -144,6 +149,15 @@ class RegisterController extends Controller
         $userData['password'] = Hash::make($userData['password']);
         $user = User::create($userData);
         $user->assignRole('customer');
+        //Admin Mail Notification
+        Mail::to(User::where('role', 'admin')->first()->email)
+                ->send(new Notification(User::where('role', 'admin')->first()->first_name,
+                    "New Customer  " . $userData['first_name']." ".$userData['last_name']." Has Been Registered On Our Portal",
+                    "",
+                    route('admin.customer.index'),
+                    "View Customers"));
+        //Admin Portal  Notification
+        User::where('role', 'admin')->first()->notify(new NewCustomerLogin($userData['first_name']." ".$userData['last_name'], route('admin.customer.index')));
         event(new Registered($user));
 
         return new Response(["status" => "registered"], 201);
